@@ -1,0 +1,90 @@
+body {
+        background-image: url("../images/showdown.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+#login h1 {
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', sans-serif;
+    text-align: center;
+}
+
+#login p {
+    color: white;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    line-height: 30px;
+}
+
+#login p span {
+    font-weight: bold;
+}
+
+button {
+    background-color: rgb(255, 255, 255);
+    width: 170px;
+    margin-top: 50px;
+    margin-left: 43%;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: rgb(79, 149, 255);
+    cursor: pointer;
+    color: rgb(209, 209, 209);
+}
+
+@media only screen and (max-width: 1000px){
+    body {
+        background-repeat: repeat;
+    }
+
+    button {
+        margin-left: 41%;
+    }
+}
+
+@media only screen and (max-width: 660px){
+    
+    #login h1 {
+        font-size: 5.5vw;
+        margin-top: 20px;
+    }
+
+    #login p {
+        font-size: 4vw;
+        margin-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 25px;
+    }
+
+    button {
+        font-size: 4vw;
+        margin-left: 36%;
+    }
+}
+
+@media only screen and (max-width: 540px){
+
+    button {
+        margin-left: 33%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+
+    button {
+        margin-left: 28%;
+        margin-top: 30px;
+    }
+}
+

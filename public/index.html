@@ -1,15 +1,25 @@
 <!doctype html>
 <html>
   <head>
-    <title>Spotify Artist Battle Template</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <title>Artist Battle App</title>
+    <link rel="stylesheet" href="./css/index.css">
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
   </head>
 
   <body>
     <div class="container">
       <div id="login">
-        <h1>This is an example of the Implicit Grant flow</h1>
-        <button id="login-button" class="btn btn-primary">Log in with Spotify</button>
+        <h1>Spotify artist battle app.</h1>
+        <p>This is a spotify artist battle app which works by entering two artist names 
+          and pressing the "Battle" button. Once that is done, the application will 
+          search the Spotify API for the two names and return with their name, popularity,
+          number of songs, and their roles in the music industry, such as song writer, musician,
+          singer, and so on. This information is then compared side by side, with the artist with
+          the higher amount of an aspect receiving a point. These points are then tallied up, and the 
+          artist with the most points is the winner. <span>Simples?</span></p>
+        <button id="login-button">Let's begin.</button>
       </div>
     </div>
     <script type="module" src="/js/pages/main.js"></script>
