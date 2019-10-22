@@ -1,0 +1,112 @@
+body {
+    background-image: url("../images/showdown.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: yellow;
+    text-shadow:  2px 2px red;
+    letter-spacing: 5px;
+    margin-left: 45%;
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.header button {
+    margin-left: 43%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+.header button:hover {
+    cursor: pointer;
+}
+
+.header p {
+    color: white;
+    font-size: 50px;
+}
+
+.header input#artist1 {
+    position: relative;
+    top: 60px;
+    left: 25%;
+    width: 150px;
+    height: 20px;
+}
+
+.header input#artist2 { 
+    width: 150px;
+    height: 20px;
+    position: relative;
+    top: 60px;
+    left: 45%;
+}
+
+.art1_con {
+    position: absolute;
+    left: 100px;
+}
+
+.art1_con h2 {
+    color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.art1_con img {
+    margin-bottom: 10px;
+}
+
+.art1_con ul li {
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.art1_con p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.art2_con {
+    position: absolute;
+    left: 62%;
+}
+
+.art2_con h2 {
+    color: orange;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.art2_con img {
+    margin-bottom: 10px;
+}
+
+.art2_con ul li {
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.art2_con p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+}
