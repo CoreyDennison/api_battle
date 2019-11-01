@@ -1,51 +1,15 @@
 <!doctype html>
 <html>
   <head>
-    <title>Battle Page</title>
-
-    <link rel="stylesheet" type="text/css" href="./css/battle.css">
-    <link rel="stylesheet" type="text/css" href="./css/box.css">
-    <link rel="stylesheet" type="text/css" href="./css/reset.css">
-
-    <script type="text/javascript" src="./js/pages/battle.js"></script>
-
-    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-
+    <title>FIGHT!</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   </head>
   <body>
-
-    <div class="header">
-      <input type="text" id="artist1"></input>
-      <input type="text" id="artist2"></input>
-      <h1>VS</h1>
-      <button id="battle_btn" onclick="battleFunc()">Battle</button>
-
-      <div class="art1_con">
-        <h2 id="art1_name"></h2>
-        <img id="art1_pic" width="150px" height="200px"/>
-        <ul>
-          <li id="art1_pop">Popularity: </li>
-          <li id="art1_fol">Followers: </li>
-          <li id="art1_type">Type: </li>
-          <li id="art1_genr">Genres: </li>
-        </ul>
-        <p id="art1_tot">Total: </p>
-      </div>
-
-      <div class="art2_con">
-        <h2 id="art2_name"></h2>
-        <img width="150px" height="200px"/>
-        <ul>
-          <li id="art2_pop">Popularity: </li>
-          <li id="art2_fol">Followers: </li>
-          <li id="art2_type">Type: </li>
-          <li id="art2_genr">Genres: </li>
-        </ul>
-        <p id="art2_tot">Total: </p>
-      </div>
-    </div>
-
-  </body>
+    <div class="container">
+    <div id="user-profile"></div>
+    <script type="module" src="/js/pages/battle.js"></script>
+  
+  <input id="artist1"></input>
+  <button id="myBtn">battle</button>
+  <div id="artist-profile"></div>
 </html>

@@ -6,13 +6,15 @@ const getUserData = (accessToken) => {
   }).then(response => response.json())
 };
 
-const getArtist = (accessToken, q) => {
-  return fetch(`https://api.spotify.com/v1/search?q=${q}&type=artist&limit=1`, {
+const getArtist = (accessToken, artist1name) => {
+
+  var artist1name = artist1.value;
+
+  return fetch(`https://api.spotify.com/v1/search?q=${artist1name}&type=artist&limit=1`, {
     headers: {
       'Authorization': `Bearer ${accessToken}`
     }
-  }).then(repsonse => response.json())
-  .then(response => console.log(response))
+  }).then(response => response.json())
 };
 
 export default {

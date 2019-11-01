@@ -1,23 +1,33 @@
-//import SpotifyAPI from "../api/spotify.js";
-//import {getHashParams} from "../helpers/url.js";
-//import {STATE_KEY} from "../helpers/constants.js";
+import SpotifyAPI from "../api/spotify.js";
+import {getHashParams} from "../helpers/url.js";
+import {STATE_KEY} from "../helpers/constants.js";
 
-let spotifyURL = "https://api.spotify.com/v1/";
+const {access_token, state} = getHashParams();
+const storedState = localStorage.getItem(STATE_KEY);
+const ARTIST_PROFILE = document.getElementById("artist-profile");
 
-function battleFunc(){
-  let artist1Name = artist1.value;
-  let artist2Name = artist2.value;
+document.getElementById("myBtn").addEventListener("click", battleFunc); 
 
-  const {access_token, state} = getHashParams();
+function battleFunc() {
 
-  let artist1Arr = [];
-
-  //review ajax and https://developer.spotify.com/console/get-search-item/
-
-  fetch(spotifyURL + "search?query=" + artist1Name)
-  .then(res => res.json())
-  .then(data => console.log(data));
-
-
-
-}
+    const outputTemplate2 = ({artists:{items:[{images, name, popularity, type, genres }]}}) =>
+      `</div>
+        <dl>
+        <dt>Photo: </dt><dd><img src=${images[0].url} width="200px" height="200px"></img></dd>
+          <dt>Name: </dt><dd>${name}</dd>
+          <dt>Popularity: </dt><dd>${popularity}</dd>
+          <dt>Type: </dt><dd>${type}</dd>
+          <dt>Genres: </dt><dd>${genres}</dd>
+        </dl>
+      </div>
+    </div>`
+  
+    if (!access_token || (state == null || state !== storedState)) {
+      window.location = "/";
+    } else {
+      SpotifyAPI.getArtist(access_token).then(response => {
+        ARTIST_PROFILE.innerHTML = outputTemplate2(response);
+      });
+  
+    }
+  }
