@@ -5,20 +5,20 @@ import {STATE_KEY} from "../helpers/constants.js";
 const {access_token, state} = getHashParams();
 const storedState = localStorage.getItem(STATE_KEY);
 const ARTIST_PROFILE = document.getElementById("artist-profile");
+const ARTIST_PROFILE2 = document.getElementById("artist-profile2");
 
 document.getElementById("myBtn").addEventListener("click", battleFunc); 
 
 function battleFunc() {
-
-    const outputTemplate2 = ({artists:{items:[{images, name, popularity, type, genres }]}}) =>
+    //artist 1 template
+    const outputTemplate = ({artists:{items:[{images, name, popularity, followers, type, genres }]}}) =>
       `</div>
-        <dl>
-        <dt>Photo: </dt><dd><img src=${images[0].url} width="200px" height="200px"></img></dd>
-          <dt>Name: </dt><dd>${name}</dd>
-          <dt>Popularity: </dt><dd>${popularity}</dd>
-          <dt>Type: </dt><dd>${type}</dd>
-          <dt>Genres: </dt><dd>${genres}</dd>
-        </dl>
+          <h2>${name}</h2>
+          <img src=${images[0].url} width="200px" height="200px"></img>
+          <p>Popularity: ${popularity}</p>
+          <p>Followers: ${followers.total}</p>
+          <p>Type: ${type}</p>
+          <p>Genres: ${genres}</p>
       </div>
     </div>`
   
@@ -26,7 +26,28 @@ function battleFunc() {
       window.location = "/";
     } else {
       SpotifyAPI.getArtist(access_token).then(response => {
-        ARTIST_PROFILE.innerHTML = outputTemplate2(response);
+        ARTIST_PROFILE.innerHTML = outputTemplate(response);
+      });
+  
+    }
+
+    // artist 2 template
+    const outputTemplate2 = ({artists:{items:[{images, name, popularity, followers, type, genres }]}}) =>
+      `</div>
+          <h2>${name}</h2>
+          <img src=${images[0].url} width="200px" height="200px"></img>
+          <p>Popularity: ${popularity}</p>
+          <p>Followers: ${followers.total}</p>
+          <p>Type: ${type}</p>
+          <p>Genres: ${genres}</p>
+      </div>
+    </div>`
+  
+    if (!access_token || (state == null || state !== storedState)) {
+      window.location = "/";
+    } else {
+      SpotifyAPI.getArtist2(access_token).then(response => {
+        ARTIST_PROFILE2.innerHTML = outputTemplate2(response);
       });
   
     }
