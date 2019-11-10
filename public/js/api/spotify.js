@@ -9,7 +9,7 @@ const getArtist = (accessToken) => {
       'Authorization': `Bearer ${accessToken}`
     }
   }).then(response => response.json())
-};
+  };
 
 
 //artist 2 search

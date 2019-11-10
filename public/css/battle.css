@@ -4,20 +4,25 @@ body {
     background-size: cover;
 }
 
+.head_con {
+    margin-left: 30%;
+    margin-top: 50px;
+}
+
 .header h1 {
     font-family: 'Permanent Marker', cursive;
     color: yellow;
     text-shadow:  2px 2px red;
     letter-spacing: 5px;
-    margin-left: 45%;
-    margin-top: 40px;
+    margin-left: 270px;
+    margin-top: 0px;
     font-size: 25px;
 }
 
 .header button {
-    margin-left: 19%;
-    margin-top: 50px;
-    padding: 10px 20px;
+    margin-left: -160px;
+    margin-top: 20px;
+    padding: 10px 10px;
     font-family: 'Gill Sans', sans-serif;
     font-size: 20px;
     font-weight: 600;
@@ -35,24 +40,105 @@ body {
 
 .header input#artist1 {
     position: relative;
-    top: 0px;
-    left: 25%;
-    width: 150px;
-    height: 20px;
+    top: -60px;
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    padding-left: 10px;
 }
 
 .header input#artist2 { 
-    width: 150px;
-    height: 20px;
     position: relative;
-    top: 0px;
-    left: 45%;
+    top: -60px;
+    left: 180px;
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    padding-left: 10px;
 }
+
+/*----------------------header responsiveness @ 1000px window width---------------------*/
+@media only screen and (max-width: 1000px){
+    body {
+        background-repeat: repeat;
+    }
+    
+    .head_con {
+        margin-left: 23%;
+    }
+}
+/*----------------------header responsiveness @ 1000px window width end---------------------*/
+
+/*----------------------header responsiveness @ 750px window width---------------------*/
+@media only screen and (max-width: 750px){
+
+    .head_con {
+        margin-left: 12%;
+    }
+}
+/*----------------------header responsiveness @ 750px window width end---------------------*/
+
+/*----------------------header responsiveness @ 550px window width---------------------*/
+@media only screen and (max-width: 550px){
+
+    .head_con {
+        margin-left: 4%;
+    }
+
+    .header h1 {
+        margin-left: 230px;
+    }
+
+    .header input#artist2 { 
+        left: 100px;
+    }
+
+    .header button {
+        margin-left: -190px;
+    }
+}
+/*----------------------header responsiveness @ 550px window width end---------------------*/
+
+/*----------------------header responsiveness @ 430px window width---------------------*/
+@media only screen and (max-width: 430px){
+
+    .head_con {
+        margin-left: 0%;
+    }
+
+    .header h1 {
+        margin-left: 47%;
+        margin-top: 60px;
+    }
+
+    .header input#artist1 { 
+        position: absolute;
+        left: 25%;
+        top: 20px;
+        height: 30px;
+    }
+
+    .header input#artist2 { 
+        position: absolute;
+        left: 25%;
+        top: 95px;
+        height: 30px;
+    }
+
+    .header button {
+        margin-top: 60px;
+        margin-left: 38%;
+        font-size: 18px;
+        padding: 10px 30px;
+    }
+}
+/*----------------------header responsiveness @ 430px window width end---------------------*/
 
 .art1_con {
     position: absolute;
     left: 100px;
-    top: 120px;
+    top: 180px;
+    width: 350px;
 }
 
 .art1_con h2 {
@@ -76,13 +162,13 @@ body {
     margin-top: 15px;
     line-height: 25px;
     color: rgb(185, 185, 185);
-    padding-right: 800px;
 }
 
 .art2_con {
     position: absolute;
-    left: 58%;
-    top: 120px;
+    left: 65%;
+    top: 180px;
+    width: 370px;
 }
 
 .art2_con h2 {
@@ -98,19 +184,74 @@ body {
     border-radius: 15px;
 }
 
-.art2_con ul li {
-    list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    font-size: 20px;
-    line-height: 30px;
-}
-
 .art2_con p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: 600;
     margin-top: 15px;
     line-height: 25px;
-    color: rgb(185, 185, 185)
+    padding-right: 20px;
+    color: rgb(185, 185, 185);
 }
+
+@media only screen and (max-width: 750px) {
+
+    .art1_con {
+        width: 200px;
+        left: 20px;
+    }
+
+    .art2_con {
+        width: 200px;
+    }
+
+    .art2_con p {
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+
+    .art1_con {
+        top: 250px;
+        width: 150px;
+    }
+
+    .art1_con img {
+        width: 40vw;
+        height: 25vh;
+    }
+
+    .art1_con h2 {
+        font-size: 4.6vw;
+    }
+
+    .art1_con p {
+        font-size: 4vw;
+        line-height: 20px;
+        padding-right: 20px;
+    }
+
+    .art2_con {
+        top: 250px;
+        left: 210px;
+        width: 150px;
+    }
+
+    .art2_con img {
+        width: 40vw;
+        height: 25vh;
+    }
+
+    .art2_con h2 {
+        font-size: 4.6vw;
+    }
+
+    .art2_con p {
+        font-size: 4vw;
+        line-height: 20px;
+        padding-right: 0px;
+    }
+}
+
+
